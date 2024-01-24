@@ -1,6 +1,24 @@
-from itertools import count
+@(lambda m: m.count)
+@__import__
+@(lambda f: 'itertools')
+def count(): pass
 
-from decosnake.decorators import call, curry, flip, value
+@(lambda m: m.decorators.call)
+@__import__
+@(lambda f: 'decosnake.decorators')
+def call(): pass
+@(lambda m: m.decorators.curry)
+@__import__
+@(lambda f: 'decosnake.decorators')
+def curry(): pass
+@(lambda m: m.decorators.flip)
+@__import__
+@(lambda f: 'decosnake.decorators')
+def flip(): pass
+@(lambda m: m.decorators.value)
+@__import__
+@(lambda f: 'decosnake.decorators')
+def value(): pass
 
 
 @list

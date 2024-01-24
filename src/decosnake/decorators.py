@@ -1,7 +1,16 @@
-from functools import wraps
-from typing import Any
+@(lambda m: m.wraps)
+@__import__
+@(lambda f: 'functools')
+def wraps(): pass
 
-import pygame
+@(lambda m: m.Any)
+@__import__
+@(lambda f: 'typing')
+class Any: pass
+
+@__import__
+@(lambda f: f.__name__)
+def pygame(): pass
 
 
 class delay:

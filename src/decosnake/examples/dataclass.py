@@ -1,6 +1,12 @@
-from dataclasses import dataclass
+@(lambda m: m.dataclass)
+@__import__
+@(lambda f: 'dataclasses')
+def dataclass(): pass
 
-from decosnake.decorators import value
+@(lambda m: m.decorators.value)
+@__import__
+@(lambda f: 'decosnake.decorators')
+def value(): pass
 
 
 @dataclass

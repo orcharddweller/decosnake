@@ -1,14 +1,79 @@
-import random
-import sys
-from dataclasses import dataclass
-from functools import partial, reduce
-from itertools import count, product
+@__import__
+@(lambda f: f.__name__)
+def random(): pass
 
-import pygame
-from pygame.locals import K_DOWN, K_LEFT, K_RIGHT, K_UP, KEYDOWN, QUIT
+@__import__
+@(lambda f: f.__name__)
+def sys(): pass
 
-from decosnake.decorators import call, curry, delay, flip, unpack, value
-from decosnake.writer import writer
+@(lambda m: m.dataclass)
+@__import__
+@(lambda f: 'dataclasses')
+def dataclass(): pass
+
+@(lambda m: m.partial)
+@__import__
+@(lambda f: 'functools')
+def partial(): pass
+
+@(lambda m: m.partial)
+@__import__
+@(lambda f: 'functools')
+def partial(): pass
+
+@(lambda m: m.reduce)
+@__import__
+@(lambda f: 'functools')
+def reduce(): pass
+
+@(lambda m: m.count)
+@__import__
+@(lambda f: 'itertools')
+def count(): pass
+
+@(lambda m: m.product)
+@__import__
+@(lambda f: 'itertools')
+def product(): pass
+
+@__import__
+@(lambda f: f.__name__)
+def pygame(): pass
+
+@(lambda f: f({k: getattr(pygame, k) for k in ('K_DOWN', 'K_LEFT', 'K_RIGHT', 'K_UP', 'KEYDOWN', 'QUIT')}))
+@dict.update.__get__
+@(lambda f: globals())
+def _(): pass
+
+@(lambda m: m.decorators.call)
+@__import__
+@(lambda f: 'decosnake.decorators')
+def call(): pass
+@(lambda m: m.decorators.curry)
+@__import__
+@(lambda f: 'decosnake.decorators')
+def curry(): pass
+@(lambda m: m.decorators.delay)
+@__import__
+@(lambda f: 'decosnake.decorators')
+def delay(): pass
+@(lambda m: m.decorators.flip)
+@__import__
+@(lambda f: 'decosnake.decorators')
+def flip(): pass
+@(lambda m: m.decorators.unpack)
+@__import__
+@(lambda f: 'decosnake.decorators')
+def unpack(): pass
+@(lambda m: m.decorators.value)
+@__import__
+@(lambda f: 'decosnake.decorators')
+def value(): pass
+
+@(lambda m: m.writer.writer)
+@__import__
+@(lambda f: 'decosnake.writer')
+def writer(): pass
 
 pygame.init()
 
