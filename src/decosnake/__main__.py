@@ -8,33 +8,33 @@ def sys(): pass
 
 @(lambda m: m.dataclass)
 @__import__
-@(lambda f: 'dataclasses')
-def dataclass(): pass
+@(lambda f: f.__doc__)
+def dataclass(): 'dataclasses'
 
 @(lambda m: m.partial)
 @__import__
-@(lambda f: 'functools')
-def partial(): pass
+@(lambda f: f.__doc__)
+def partial(): 'functools'
 
 @(lambda m: m.partial)
 @__import__
-@(lambda f: 'functools')
-def partial(): pass
+@(lambda f: f.__doc__)
+def partial(): 'functools'
 
 @(lambda m: m.reduce)
 @__import__
-@(lambda f: 'functools')
-def reduce(): pass
+@(lambda f: f.__doc__)
+def reduce(): 'functools'
 
 @(lambda m: m.count)
 @__import__
-@(lambda f: 'itertools')
-def count(): pass
+@(lambda f: f.__doc__)
+def count(): 'itertools'
 
 @(lambda m: m.product)
 @__import__
-@(lambda f: 'itertools')
-def product(): pass
+@(lambda f: f.__doc__)
+def product(): 'itertools'
 
 @__import__
 @(lambda f: f.__name__)
@@ -47,33 +47,33 @@ def _(): pass
 
 @(lambda m: m.decorators.call)
 @__import__
-@(lambda f: 'decosnake.decorators')
-def call(): pass
+@(lambda f: f.__doc__)
+def call(): 'decosnake.decorators'
 @(lambda m: m.decorators.curry)
 @__import__
-@(lambda f: 'decosnake.decorators')
-def curry(): pass
+@(lambda f: f.__doc__)
+def curry(): 'decosnake.decorators'
 @(lambda m: m.decorators.delay)
 @__import__
-@(lambda f: 'decosnake.decorators')
-def delay(): pass
+@(lambda f: f.__doc__)
+def delay(): 'decosnake.decorators'
 @(lambda m: m.decorators.flip)
 @__import__
-@(lambda f: 'decosnake.decorators')
-def flip(): pass
+@(lambda f: f.__doc__)
+def flip(): 'decosnake.decorators'
 @(lambda m: m.decorators.unpack)
 @__import__
-@(lambda f: 'decosnake.decorators')
-def unpack(): pass
+@(lambda f: f.__doc__)
+def unpack(): 'decosnake.decorators'
 @(lambda m: m.decorators.value)
 @__import__
-@(lambda f: 'decosnake.decorators')
-def value(): pass
+@(lambda f: f.__doc__)
+def value(): 'decosnake.decorators'
 
 @(lambda m: m.writer.writer)
 @__import__
-@(lambda f: 'decosnake.writer')
-def writer(): pass
+@(lambda f: f.__doc__)
+def writer(): 'decosnake.writer'
 
 pygame.init()
 

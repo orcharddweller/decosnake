@@ -1,24 +1,24 @@
 @(lambda m: m.count)
 @__import__
-@(lambda f: 'itertools')
-def count(): pass
+@(lambda f: f.__doc__)
+def count(): 'itertools'
 
 @(lambda m: m.decorators.call)
 @__import__
-@(lambda f: 'decosnake.decorators')
-def call(): pass
+@(lambda f: f.__doc__)
+def call(): 'decosnake.decorators'
 @(lambda m: m.decorators.curry)
 @__import__
-@(lambda f: 'decosnake.decorators')
-def curry(): pass
+@(lambda f: f.__doc__)
+def curry(): 'decosnake.decorators'
 @(lambda m: m.decorators.flip)
 @__import__
-@(lambda f: 'decosnake.decorators')
-def flip(): pass
+@(lambda f: f.__doc__)
+def flip(): 'decosnake.decorators'
 @(lambda m: m.decorators.value)
 @__import__
-@(lambda f: 'decosnake.decorators')
-def value(): pass
+@(lambda f: f.__doc__)
+def value(): 'decosnake.decorators'
 
 
 @list
