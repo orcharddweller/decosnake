@@ -35,11 +35,6 @@ def product(): 'itertools'
 @(lambda f: f.__name__)
 def pygame(): pass
 
-@(lambda f: f({k: getattr(pygame, k) for k in ('K_DOWN', 'K_LEFT', 'K_RIGHT', 'K_UP', 'KEYDOWN', 'QUIT')}))
-@dict.update.__get__
-@(lambda f: globals())
-def _(): pass
-
 @(lambda m: m.decorators.call)
 @__import__
 @(lambda f: f.__doc__)
@@ -69,6 +64,12 @@ def value(): 'decosnake.decorators'
 @__import__
 @(lambda f: f.__doc__)
 def writer(): 'decosnake.writer'
+
+@tuple
+@(partial(map, partial(unpack(globals().__setitem__))))
+@(partial(map, lambda v: (v, getattr(pygame, v))))
+@(lambda f: ('K_DOWN', 'K_LEFT', 'K_RIGHT', 'K_UP', 'KEYDOWN', 'QUIT'))
+def _(): pass
 
 pygame.init()
 
