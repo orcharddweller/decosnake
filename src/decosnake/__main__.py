@@ -16,11 +16,6 @@ def dataclass(): 'dataclasses'
 @(lambda f: f.__doc__)
 def partial(): 'functools'
 
-@(lambda m: m.partial)
-@__import__
-@(lambda f: f.__doc__)
-def partial(): 'functools'
-
 @(lambda m: m.reduce)
 @__import__
 @(lambda f: f.__doc__)
