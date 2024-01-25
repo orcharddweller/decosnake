@@ -1,5 +1,12 @@
-from dataclasses import dataclass
-from typing import Any
+@(lambda m: m.dataclass)
+@__import__
+@(lambda f: 'dataclasses')
+def dataclass(): pass
+
+@(lambda m: m.Any)
+@__import__
+@(lambda f: 'typing')
+class Any: pass
 
 
 @dataclass
