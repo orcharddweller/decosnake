@@ -1,12 +1,12 @@
 @(lambda m: m.dataclass)
 @__import__
 @(lambda f: f.__doc__)
-def dataclass(): 'dataclasses'
+def dataclass(): "dataclasses"
 
 @(lambda m: m.decorators.value)
 @__import__
 @(lambda f: f.__doc__)
-def value(): 'decosnake.decorators'
+def value(): "decosnake.decorators"
 
 
 @dataclass

@@ -1,12 +1,12 @@
 @(lambda m: m.wraps)
 @__import__
 @(lambda f: f.__doc__)
-def wraps(): 'functools'
+def wraps(): "functools"
 
 @(lambda m: m.Any)
 @__import__
 @(lambda f: f.__doc__)
-class Any: 'typing'
+class Any: "typing"
 
 @__import__
 @(lambda f: f.__name__)

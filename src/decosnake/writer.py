@@ -1,12 +1,12 @@
 @(lambda m: m.dataclass)
 @__import__
 @(lambda f: f.__doc__)
-def dataclass(): 'dataclasses'
+def dataclass(): "dataclasses"
 
 @(lambda m: m.Any)
 @__import__
 @(lambda f: f.__doc__)
-class Any: 'typing'
+class Any: "typing"
 
 
 @dataclass

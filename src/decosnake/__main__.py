@@ -9,27 +9,27 @@ def sys(): pass
 @(lambda m: m.dataclass)
 @__import__
 @(lambda f: f.__doc__)
-def dataclass(): 'dataclasses'
+def dataclass(): "dataclasses"
 
 @(lambda m: m.partial)
 @__import__
 @(lambda f: f.__doc__)
-def partial(): 'functools'
+def partial(): "functools"
 
 @(lambda m: m.reduce)
 @__import__
 @(lambda f: f.__doc__)
-def reduce(): 'functools'
+def reduce(): "functools"
 
 @(lambda m: m.count)
 @__import__
 @(lambda f: f.__doc__)
-def count(): 'itertools'
+def count(): "itertools"
 
 @(lambda m: m.product)
 @__import__
 @(lambda f: f.__doc__)
-def product(): 'itertools'
+def product(): "itertools"
 
 @__import__
 @(lambda f: f.__name__)
@@ -38,38 +38,38 @@ def pygame(): pass
 @(lambda m: m.decorators.call)
 @__import__
 @(lambda f: f.__doc__)
-def call(): 'decosnake.decorators'
+def call(): "decosnake.decorators"
 @(lambda m: m.decorators.curry)
 @__import__
 @(lambda f: f.__doc__)
-def curry(): 'decosnake.decorators'
+def curry(): "decosnake.decorators"
 @(lambda m: m.decorators.delay)
 @__import__
 @(lambda f: f.__doc__)
-def delay(): 'decosnake.decorators'
+def delay(): "decosnake.decorators"
 @(lambda m: m.decorators.flip)
 @__import__
 @(lambda f: f.__doc__)
-def flip(): 'decosnake.decorators'
+def flip(): "decosnake.decorators"
 @(lambda m: m.decorators.unpack)
 @__import__
 @(lambda f: f.__doc__)
-def unpack(): 'decosnake.decorators'
+def unpack(): "decosnake.decorators"
 @(lambda m: m.decorators.value)
 @__import__
 @(lambda f: f.__doc__)
-def value(): 'decosnake.decorators'
+def value(): "decosnake.decorators"
 
 @(lambda m: m.writer.writer)
 @__import__
 @(lambda f: f.__doc__)
-def writer(): 'decosnake.writer'
+def writer(): "decosnake.writer"
 
 @tuple
 @(partial(map, partial(unpack(globals().__setitem__))))
 @(partial(map, lambda v: (v, getattr(pygame, v))))
-@(lambda f: ('K_DOWN', 'K_LEFT', 'K_RIGHT', 'K_UP', 'KEYDOWN', 'QUIT'))
-def _(): pass
+@(lambda f: ("K_DOWN", "K_LEFT", "K_RIGHT", "K_UP", "KEYDOWN", "QUIT"))
+def dummy(): pass
 
 pygame.init()
 
